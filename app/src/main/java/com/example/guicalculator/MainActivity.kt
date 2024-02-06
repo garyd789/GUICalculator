@@ -236,7 +236,7 @@ class MainActivity : AppCompatActivity() {
                     errorMessage = Pair(true, "Missing operator")
                }
                 "sqrt" -> {
-                    if (val1 > 0) {
+                    if (val1 >= 0) {
                         res = sqrt(val1)
                     }
                     else {
