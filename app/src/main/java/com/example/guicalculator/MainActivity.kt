@@ -208,7 +208,10 @@ class MainActivity : AppCompatActivity() {
     }
     private fun clear(){
         binding.input.setText("")
+        val1 = 0.0
+        val2 = 0.0
         res = 0.0
+        errorMessage = Pair(false,"")
     }
 
     private fun calculate(operator:String) {
@@ -233,7 +236,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 "" -> {
                     Log.d("MainActivity","Missing operator")
-                    errorMessage = Pair(true, "Missing operator")
+                    errorMessage = Pair(true, "Missing values")
                }
                 "sqrt" -> {
                     if (val1 >= 0) {
